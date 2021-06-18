@@ -1,6 +1,6 @@
 function linearReg02()
 
-close all;
+close all; clc;
 addpath('../ml-octave');
 
 x = [0.1; 1.1; 2; 3; 4.1];
@@ -33,5 +33,8 @@ for it = 1 : iteration
 	plot(it, J(it), 'rx', 'MarkerSize', 3);
 	hold on;
 end
+
+% predict = [1 2.5 6.25] * theta(iteration, :)';
+% printf('Predicted value is %f for x %f\n', predict, 2.5);
 
 end
